@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ADD ASSIGNMENT</h1>
+
+    <form  id="assignment-form">
+
+        <label for="assignment-title">Assignment Title</label>
+        <input type="text" id="assignment-title" required>
+
+        <label for="assignment-subject">Subject</label>
+        <input type="text" id="assignment-subject" required>
+
+        <label for="assignment-due">Due Date and Time</label>
+        <input type="datetime-local" id="assignment-due" required>
+
+        <label for="assignment-status">Status</label>
+        <select id="assignment-status" required>
+            <option value="Pending">Pending</option>
+            <option value="Drafting">Drafting</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Review stage">Review stage</optiond>
+            <!-- <options></options> -->
+        </select>
+<label for="assignment-details">Details</label>
+<textarea id="assignment-details" rows="5"></textarea>
+<button type="submit">Add Assignment</button>
+    </form>
+</body>
+</html>

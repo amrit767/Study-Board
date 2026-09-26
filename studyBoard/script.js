@@ -41,3 +41,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+const assignmentForm = document.getElementById('assignment-form');
+if (assignmentForm){
+    assignmentForm.addEventListener('submit', (event) =>{
+        event.preventDefault();
+
+        const assignments = JSON.parse(
+            localStorage.getItem('assignments') || '[]'
+        );
+
+        const assignment = {
+            id: Date.now(),
+            title:document.getElementById('assignment-title').ariaValueMax.trim(),
+            subject:document.getElementById('assignment-subject').ariaValueMax.trim(),
+            due:document.getElementById('assignment-due').ariaValueMax.trim(),
+            status:document.getElementById('assignment-status').ariaValueMax.trim(),
+            details:document.getElementById('assignment-details').ariaValueMax.trim(),
+           completed:false
+        };
+        assignments.push(assignment);
+        localStorage.setItem('assignments', JSON.stringify(assignments));
+        window.location.href = 'index.html';
+    });
+}
