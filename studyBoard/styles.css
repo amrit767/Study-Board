@@ -1,4 +1,4 @@
-/* --- SF PRO TEXT (Using Display Regular as a temporary substitute) --- */
+
 @font-face {
     font-family: 'SF Pro Text Regular';
     src: url('fonts/sf-pro-display_regular.woff2') format('woff2'); /* This file exists! */
@@ -7,11 +7,11 @@
 }
 
 
-/* --- SF PRO TEXT (Using your working Semibold file as the fallback) --- */
+
 @font-face {
     font-family: 'SF Pro Text';
     src: url('fonts/sf-pro-text_semibold.woff2') format('woff2');
-    font-weight: 400;
+    font-weight: 600;
     font-style: normal;
 }
 
@@ -25,6 +25,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 
 }
 
@@ -46,17 +47,17 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 32px;
     font-family: var(--paragraph-font);
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
     z-index: 1000;
     opacity: 1.0;
     background-color: #E8E4D8;
     border-bottom:1px solid #D2CEC1;
     color:#292A28;
+    width:100%;
+    padding:16px 32px;
 
 }
 
@@ -117,8 +118,10 @@ nav .nav-right a{
     font-weight:500;
     color:#65695E;
     padding:6px 10px;
-    border-radius: 4px;
-    transition:color 0.15s ease, background-color 0.15s ease;
+}
+
+nav .nav-right a {
+    text-decoration: none;
 }
 
 nav .nav-right a:hover{
