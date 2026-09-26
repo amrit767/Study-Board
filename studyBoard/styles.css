@@ -288,10 +288,10 @@ nav .nav-right a:hover {
 .row {
     font-family: var(--paragraph-font);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 100px;
+    grid-template-columns: 70px 2.5fr 1.2fr 1.2fr 1.2fr ;
     /* padding-top: 10px;
     padding-bottom: 10px; */
-    gap: 40px;
+    gap: 25px;
     align-items: center;
     border-bottom: var(--border);
     padding: 10px;
